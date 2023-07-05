@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+:root {
+    --bg--color: #fff;
+    --text--color: #fff;
+    --robot--color: #1a70ea;
+    --nav-bg: #0ea4db;
+    --nav--hover: #7d7c7c;
+    color: #549505;
+}
+
+body {
+    /* position: relative; */
+    color: var(--text--color);
+    background-color: var(--bg--color);
+    font-family: 微軟正黑體;
+}
+
+nav {
+    background-color: var(--nav-bg);
+    color: var(--text--color);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & ul {
+        padding: 10px;
+        background: var(--nav-bg);
+    }
+}
+
+.nav-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+
+    &>p {
+        font-size: 35px;
+        margin: 0;
+        color: #ebcc07;
+    }
+
+    &>img {
+        width: 25%;
+    }
+}
+
+.nav-text {
+    font-size: 20px;
+    color: var(--text--color);
+    /* transition: all 1s inherit; */
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 2px;
+        right: 3px;
+        height: 3px;
+        bottom: 0;
+        background-color: #f3963f;
+        transform: scale(0);
+        transform-origin: center;
+        transition: all 0.5s;
+    }
+
+    &:hover {
+        color: var(--nav--hover);
+
+        /* transform: scale(1.1); */
+        &::after {
+            transform: scale(1);
+            /* transform-origin: right; */
+        }
+    }
+
+}
+
+.robot,
+.sun {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--robot--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+
+    &>img {
+        width: 70%;
+        object-fit: cover;
+    }
+}
+
+.robot_box1 {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #000;
+    border-radius: 5px;
+    position: absolute;
+    right: 120px;
+    bottom: 80px;
+    transform: scale(0);
+    transition: all 0.5s;
+    transform-origin: right bottom;
+    z-index: 100;
+    background-color: #fff;
+}
+
+.robot_box1.robot_box1_click {
+    transform: scale(1);
+}
+
+.robot_header,
+.robot_footer {
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.robot_body {
+    flex: 1;
+    padding: 10px 15px;
+    overflow-x: auto;
+}
+
+.robot_header {
+    background-color: #b4adad;
+    border-bottom: 1px solid #000;
+
+    &>img {
+        width: 15%;
+        cursor: pointer;
+    }
+}
+
+.robot_box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+.robot_text1 {
+    background-color: #89b8f9;
+    padding: 5px 10px;
+    border-radius: 5px;
+    word-break: break-all;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.robot_footer {
+    /* padding: 10px 20px; */
+    width: 100%;
+    border-top: 1px solid #000;
+
+    &>button {
+        margin-left: 10px;
+        padding: 2px 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 1px solid #333;
+    }
+}
+
+.robot_input {
+    padding: 2px 10px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.sun {
+    bottom: 100px;
+    background-color: var(--robot--color);
+}
+
+/* :root{
+    --card--bg:#299a07;
+    --cardbm--bg:#e57206;
+} */
+/* .a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+.cardbox{
+    width: 300px;
+    height: 400px;
+    position: relative;
+}
+.card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--card--bg);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all 0.5s linear;
+    &>img{
+        width: 90%;
+        object-fit: cover;
+    }
+    &:hover{
+        transform: rotateY(180deg);
+    }
+}
+
+.card::before{
+    content: '讓你變好運的柴柴 現在只要100000元';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cardbm--bg);
+    border-radius: 10px;
+    color: #fff;
+    font-size: px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+} */

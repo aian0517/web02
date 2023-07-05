@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反詐救金師</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js'
+        integrity='sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=='
+        crossorigin='anonymous'></script>
+    <!-- <script src="./queryloader2-master/queryloader2.min.js"></script> -->
+    <link rel="stylesheet" href="./bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                反詐<img src="./image/標題-removebg-preview.png" alt="" style="height: 50px;"> 救金師
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">詐騙術</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">常見詐騙術</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">預防手法</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">防範術課程購買</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="robot position-fixed" onclick="robot()">
+        <img src="./image/line.png" alt="">
+    </div>
+    <div class="robot_box1">
+        <div class="robot_header w-100">
+            <h1 class="">聊天機器人</h1>
+            <button class="btn btn-close" onclick="robot_xx()"></button>
+            <!-- <img src="./image/叉叉.png" alt="" onclick="robot_xx()"> -->
+        </div>
+        <div class="robot_body">
+            <span>
+                <p class="robot_text1">你好~歡迎蒞臨本網站。我是本網站的聊天機器人，有任何問題都可以問我喔~</p>
+            </span>
+        </div>
+        <div class="robot_footer">
+            <input type="text" class="robot_input" onkeydown="fs_keydown(event)">
+            <button onclick="robot_submit()">送出</button>
+        </div>
+    </div>
+
+    <div class="sun position-fixed">
+        <img src="./image/sun.png" alt="">
+    </div>
+
+    <!-- <div class="a">
+        <div class="cardbox">
+            <div class="card">
+                <h1>可愛的柴柴</h1>
+                <img src="./image/柴柴.jpg" alt="">
+            </div>
+            <div class="cardbm">
+                與美好的將來相會
+            </div>
+            
+        </div>
+    </div> -->
+
+    <!-- <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            QueryLoader2(document.querySelector("body"), {
+                barColor: "#efefef",
+                backgroundColor: "#111",
+                percentage: true,
+                barHeight: 1,
+                minimumTime: 1000,
+                fadeOutTime: 5000
+            });
+        });
+    </script> -->
+    <div style="height:400vh;"></div>
+    <script src="./index.js"></script>
+
+</body>
+
+</html>

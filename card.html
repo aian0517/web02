@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            height: 150px;
+            transition: .5s;
+        }
+
+        .card:hover {
+            height: 500px;
+        }
+
+        .card-body {
+            z-index: 99;
+        }
+
+        .imgbox {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                width: 600px;
+                height: 120px;
+                transform: translate(-50%, -50%);
+                animation: rotate2 2s infinite linear;
+                background: linear-gradient(transparent, #ff0048, #ff0048, #ff0048, transparent);
+            }
+        }
+
+        img {
+            z-index: 98;
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+            position: relative;
+            top: 5px;
+            left: 5px;
+            object-fit: cover;
+
+        }
+
+        .lines {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 600px;
+                height: 120px;
+                transform: translate(-50%, -50%);
+                animation: rotate 2s infinite linear;
+                background: linear-gradient(transparent, aqua, aqua, aqua, transparent);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 3px;
+                background: #000;
+            }
+        }
+
+        @keyframes rotate {
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes rotate2 {
+            from {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <i class="bi bi-box-seam"></i>
+        <div class="row row-cols-4">
+            <div class="col">
+                <div class="card bg-dark text-light">
+                    <div class="lines"></div>
+                    <div class="imgbox">
+                        <img src="./image/柴柴.jpg" alt="">
+                    </div>
+                    <div class="card-body bg-dark">
+                        <h4 class="card-title">Lorem ipsum dolor sit amet.</h4>
+                        <div class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias ipsam
+                            pariatur, voluptatem quaerat quibusdam, possimus corporis a voluptatum, porro iste
+                            perspiciatis
+                            quos cumque facere error? Soluta molestias quos facilis similique!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
